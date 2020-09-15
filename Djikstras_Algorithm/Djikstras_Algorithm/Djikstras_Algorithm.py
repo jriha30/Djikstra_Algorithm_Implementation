@@ -29,10 +29,10 @@ edges = [
     ('X', 'E', 4),
     ('A', 'B', 3),
     ('A', 'D', 4),
-    ('B', 'D', 4),
+    ('B', 'D', 6),
     ('B', 'H', 5),
     ('C', 'L', 2),
-    ('D', 'F', 1),
+    ('D', 'F', 3),
     ('F', 'H', 3),
     ('G', 'H', 2),
     ('G', 'Y', 2),
@@ -85,4 +85,4 @@ def dijsktra(graph, initial, end):
     print("Here is the shortest path from " + initial + " to " + end + ": ", path)
     return path
 
-dijsktra(graph, 'X', 'Y')
+print(dijsktra(graph, 'X', 'F'))
