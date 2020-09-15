@@ -56,6 +56,8 @@ def dijsktra(graph, initial, end):
         visited.add(current_node)
         destinations = graph.edges[current_node]
         weight_to_current_node = shortest_paths[current_node][1]
+        print("Current Node: " + current_node)
+        print("Here is a list of your destinations from " + current_node + ": ", destinations)
 
         for next_node in destinations:
             weight = graph.weights[(current_node, next_node)] + weight_to_current_node
@@ -80,7 +82,7 @@ def dijsktra(graph, initial, end):
         current_node = next_node
     # Reverse path
     path = path[::-1]
+    print("Here is the shortest path from " + initial + " to " + end + ": ", path)
     return path
 
-
-print(dijsktra(graph, 'X', 'Y'))
+dijsktra(graph, 'X', 'Y')
